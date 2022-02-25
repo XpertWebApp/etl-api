@@ -1,0 +1,40 @@
+{
+  "name": "ioforge",
+  "version": "1.0.0",
+  "description": "A project for providing models to commercials ",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js",
+    "start": "nodemon app.js",
+    "lint": "eslint ./ --cache --ignore-pattern .gitignore",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+  },
+  "author": "Rahul Nair",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.1",
+    "fs": "0.0.1-security",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.0",
+    "path": "^0.12.7",
+    "pre-commit": "^1.2.2",
+    "sequelize": "^6.6.5",
+    "sequelize-cli": "^6.2.0"
+  },
+  "pre-commit": [
+    "precommit-msg",
+    "lint"
+  ],
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "prettier": "^2.5.1"
+  }
+}
