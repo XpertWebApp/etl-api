@@ -14,7 +14,13 @@ app.use(express.urlencoded({ extended: false }));
 const db = require("./models");
 
 db.sequelize.sync();
+
 app.use("/records", require("./routes/records"));
+
+app.use("/",(req, res, next) => {
+    return res.status(404).send(
+        "<h1 style='text-align:center'>ETL Demo Api</h1>")
+})
 
 app.listen(port, () => {
   // eslint-disable-next-line no-console
