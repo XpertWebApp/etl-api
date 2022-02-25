@@ -1,15 +1,11 @@
 /* eslint-disable eqeqeq */
 /* eslint-disable prettier/prettier */
-const { Op } = require("sequelize");
-const Sequelize = require("sequelize");
-const _ = require("lodash");
 const Record = require("../models").records;
+const jsonData = require('../uploads/patient_10_.json');
 
 const create = async (req, res) => {
 
     try {
-
-      const jsonData = require('../uploads/patient_10_.json');
 
       const insertedRecords= await Record.bulkCreate(jsonData);
 

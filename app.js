@@ -15,6 +15,7 @@ const db = require("./models");
 
 db.sequelize.sync();
 app.use("/records", require("./routes/records"));
+
 app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.log(`ETL api listening on port ${port}!`);
